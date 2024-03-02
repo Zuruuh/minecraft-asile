@@ -16,6 +16,7 @@ services:
       RCON_PASSWORD: "!rY#B!g5^nLteMJ4c2*JXkAb#KT4MJJ%E!sCLDSS"
       MODRINTH_MODPACK: "/smp asile 1.0.0.mrpack"
       MODRINTH_LOADER: "forge"
+      PATCH_DEFINITIONS: "/patches"
     ports:
       - "0.0.0.0:25565:25565"
       - "0.0.0.0:24454:24454"
@@ -23,3 +24,4 @@ services:
     volumes:
       - "./data:/data:rw"
       - "./smp asile 1.0.0.mrpack:/smp asile 1.0.0.mrpack:ro"
+      - "./patches:/patches:ro"

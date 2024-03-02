@@ -1,21 +1,17 @@
 {
-  "patches": [
+  "file": "/data/config/voicechat/voicechat-server.properties",
+  "ops": [
     {
-      "file": "/data/config/voicechat/voicechat-server.properties",
-      "ops": [
-        {
-          "$set": {
-            "path": "$.bind_address",
-            "value": "*"
-          }
-        },
-        {
-          "$set": {
-            "path": "$.voice_host",
-            "value": "194.164.206.100:24454"
-          }
-        }
-      ]
+      "$set": {
+        "path": "$.bind_address",
+        "value": "*"
+      }
+    },
+    {
+      "$set": {
+        "path": "$.voice_host",
+        "value": "194.164.206.100:24454"
+      }
     }
   ]
 }

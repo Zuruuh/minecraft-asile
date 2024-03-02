@@ -1,0 +1,25 @@
+services:
+  server:
+    image: "itzg/minecraft-server:2024.2.2-java21-alpine"
+    stdin_open: true
+    tty: true
+    environment:
+      EULA: true
+      INIT_MEMORY: "512M"
+      MAX_MEMORY: "4G"
+      TYPE: "FORGE"
+      MOD_PLATFORM: "modrinth"
+      VERSION: "1.20.1"
+      FORGE: "42.2.17"
+      MOTD: "§6§lserveur goatesque"
+      SNOOPER_ENABLED: false
+      RCON_PASSWORD: "!rY#B!g5^nLteMJ4c2*JXkAb#KT4MJJ%E!sCLDSS"
+      MODRINTH_MODPACK: "/smp asile 1.0.0.mrpack"
+      MODRINTH_LOADER: "forge"
+    ports:
+      - "0.0.0.0:25565:25565"
+      - "0.0.0.0:24454:24454"
+    restart: "unless-stopped"
+    volumes:
+      - "./data:/data:rw"
+      - "./smp asile 1.0.0.mrpack:/smp asile 1.0.0.mrpack:ro"
